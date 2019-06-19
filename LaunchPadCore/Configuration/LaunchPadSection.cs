@@ -24,6 +24,16 @@ namespace Lextm.MSBuildLaunchPad.Configuration
             get { return (ScriptToolMappingElementCollection)base["scriptToolMappings"]; }
         }
 
+
+        [ConfigurationProperty("scriptToolAddons", IsDefaultCollection = false)]
+        [ConfigurationCollection(typeof(ScriptToolAddonElement),
+            AddItemName = "add",
+            ClearItemsName = "clear",
+            RemoveItemName = "remove")]
+        public ScriptToolAddonCollection ScriptToolAddons
+        {
+            get { return (ScriptToolAddonCollection)base["scriptToolAddons"]; }
+        }
         private static LaunchPadSection section;
 
         public static LaunchPadSection GetSection()

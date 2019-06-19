@@ -24,3 +24,5 @@ logs
 T4MVC.cs
 /SharpSnmpLib/sharpsnmplib.snk
 /packages
+/.vs/msbuildlaunchpad/v15/Server/sqlite3
+/.vs

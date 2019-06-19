@@ -42,6 +42,8 @@
     <Compile Include="..\MSBuildLaunchPad\Properties\AssemblyInfo.cs">
       <Link>Properties\AssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Configuration\ScriptToolAddonCollection.cs" />
+    <Compile Include="Configuration\ScriptToolAddonElement.cs" />
     <Compile Include="Configuration\ScriptToolMappingElement.cs" />
     <Compile Include="Configuration\ScriptToolMappingElementCollection.cs" />
     <Compile Include="Configuration\SolutionFileMappingElementCollection.cs" />

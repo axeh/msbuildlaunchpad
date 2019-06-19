@@ -6,6 +6,7 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 using System.Collections.Generic;
+using Lextm.MSBuildLaunchPad.Configuration;
 using Microsoft.Win32;
 
 namespace Lextm.MSBuildLaunchPad
@@ -110,6 +111,11 @@ namespace Lextm.MSBuildLaunchPad
                 foreach (var key in keys)
                 {
                     _tools.Add(new Tool(key, (string)registryKey.OpenSubKey(key).GetValue("MSBuildToolsPath")));
+                }
+
+                foreach (ScriptToolAddonElement item in LaunchPadSection.GetSection().ScriptToolAddons)
+                {
+                    _tools.Add(new Tool(item.Tool, item.Path));
                 }
 
                 _tools.Sort();
